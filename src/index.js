@@ -1,19 +1,14 @@
-module.exports = function towelSort (matrix) {
+function towelSort(matrix){
+ if (!matrix || matrix.length ===0) {
+ return [];
+ }
+ let arr =[];
+ for (let i =0; i<matrix.length; i++) {
+ if ((i+1)%2 ===0) {
+ matrix[i] = matrix[i].reverse();
 
-
-var newarr=[];
-//for (let k=0; k<arr.length;k=k+1)
-let x = 1;
-let y = 0;
-for (let l=0;l<matrix.length;l+=2) {
-
-for (let k=0; k<matrix[y].length;k++)
-newarr.push(matrix[y][k]);
-y +=2;
-
-for (let i=matrix[x].length-1; i>=0; i--)
-newarr.push(matrix[x][i]);
-x +=2;
-}
-return newarr;
-}
+ }
+ arr = arr.concat(matrix[i]);
+ }
+  return arr;
+  }
