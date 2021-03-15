@@ -1,7 +1,5 @@
 module.exports = function towelSort (matrix) {
- if (matrix === undefined) {
-    return [];
-} else
+
 
 var newarr=[];
 //for (let k=0; k<arr.length;k=k+1)
